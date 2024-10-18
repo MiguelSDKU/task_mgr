@@ -18,7 +18,6 @@ def scan():
     conn = get_db()
     cursor = conn.execute("SELECT * FROM task", ())
     results = cursor.fetchall()
-    cursor.close()
     return output_formatter(results)
 
 def select_by_id(task_id):
